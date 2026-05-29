@@ -258,15 +258,6 @@ choices:[
 
 ];
 
-const choices = [
-
-"① 원리를 먼저 이해한다",
-"② 문제를 먼저 푼다",
-"③ 계획을 세운다",
-"④ 친구와 이야기한다",
-"⑤ 상황에 따라 다르다"
-
-];
 
 const profiles = {
 
@@ -333,17 +324,25 @@ questions.forEach((q,index)=>{
 
 let html = `
 <div class="question">
-<b>${index+1}. ${q}</b>
+<b>${index+1}. ${q.question}</b>
 `;
 
-choices.forEach((choice,i)=>{
+q.choices.forEach((choice,i)=>{
 
 html += `
 <label>
-<input type="radio" name="q${index}" value="${i+1}">
+<input type="radio"
+name="q${index}"
+value="${i+1}">
 ${choice}
 </label>
 `;
+
+});
+
+html += "</div>";
+
+qBox.innerHTML += html;
 
 });
 
