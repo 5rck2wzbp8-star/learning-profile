@@ -125,7 +125,7 @@ line-height:1.8;
 const questions = [
 
 {
-question:"새로운 단원을 배울 때 가장 먼저 하는 행동은",
+question:"새로운 단원을 배우게 되었을 때 가장 먼저 하는 행동은?",
 choices:[
 "교과서와 개념 구조를 먼저 살펴본다",
 "관련 문제를 먼저 풀어본다",
@@ -136,32 +136,21 @@ choices:[
 },
 
 {
-question:"어려운 문제를 만났을 때 가장 가까운 행동은",
+question:"시험에서 틀린 문제를 발견했을 때 가장 가까운 행동은?",
 choices:[
-"관련 개념을 다시 찾아본다",
+"어떤 개념을 놓쳤는지 분석한다",
 "비슷한 문제를 더 풀어본다",
-"복습 목록에 추가한다",
-"친구나 선생님께 질문한다",
-"일단 넘어가고 나중에 다시 본다"
+"복습 계획에 추가한다",
+"친구와 풀이를 비교한다",
+"문제에 따라 접근을 바꾼다"
 ]
 },
 
 {
-question:"시험 2주 전 주로 하는 행동은",
+question:"공부가 가장 잘되었다고 느끼는 순간은?",
 choices:[
-"개념 정리를 시작한다",
-"문제풀이 비중을 높인다",
-"세부 계획표를 작성한다",
-"스터디를 진행한다",
-"과목에 따라 전략을 바꾼다"
-]
-},
-
-{
-question:"공부가 가장 잘됐다고 느끼는 순간은",
-choices:[
-"원리를 이해했을 때",
-"문제를 맞혔을 때",
+"원리가 이해되었을 때",
+"문제를 해결했을 때",
 "계획을 달성했을 때",
 "친구에게 설명했을 때",
 "여러 방법을 적절히 활용했을 때"
@@ -169,62 +158,18 @@ choices:[
 },
 
 {
-question:"과제를 받으면 가장 먼저 하는 행동은",
+question:"과제를 받으면 가장 먼저 하는 행동은?",
 choices:[
-"배경지식을 조사한다",
+"관련 자료를 조사한다",
 "바로 시작한다",
-"일정을 계산한다",
+"일정을 계획한다",
 "함께할 사람을 찾는다",
-"과제 특성부터 파악한다"
+"과제 특성을 파악한다"
 ]
 },
 
 {
-question:"수업 중 가장 자주 하는 행동은",
-choices:[
-"왜 그런지 생각한다",
-"예제 풀이를 따라간다",
-"필기를 정리한다",
-"질문하거나 토론한다",
-"상황에 따라 다르게 참여한다"
-]
-},
-
-{
-question:"복습할 때 가장 선호하는 방법은",
-choices:[
-"개념을 다시 설명해본다",
-"문제를 다시 풀어본다",
-"체크리스트를 점검한다",
-"친구와 설명해본다",
-"방법을 바꿔가며 공부한다"
-]
-},
-
-{
-question:"공부할 때 가장 중요하다고 생각하는 것은",
-choices:[
-"이해",
-"적용",
-"꾸준함",
-"소통",
-"균형"
-]
-},
-
-{
-question:"친구가 질문했을 때 주로 하는 행동은",
-choices:[
-"원리부터 설명한다",
-"풀이과정을 설명한다",
-"공부방법을 알려준다",
-"같이 토론한다",
-"질문에 따라 다르게 답한다"
-]
-},
-
-{
-question:"자신의 가장 큰 학습 강점은",
+question:"자신의 가장 큰 학습 강점은?",
 choices:[
 "개념 이해",
 "문제 해결",
@@ -232,32 +177,147 @@ choices:[
 "협력과 소통",
 "다양한 전략 활용"
 ]
-},
-
-{
-question:"학습 효율이 떨어질 때 주로 하는 행동은",
-choices:[
-"개념을 다시 점검한다",
-"문제 유형을 바꾼다",
-"계획을 수정한다",
-"다른 사람과 공부한다",
-"새로운 전략을 시도한다"
-]
-},
-
-{
-question:"가장 선호하는 학습 방식은",
-choices:[
-"개념 중심 학습",
-"문제 중심 학습",
-"계획 중심 학습",
-"협력 중심 학습",
-"융합형 학습"
-]
 }
 
 ];
 
+const profiles = {
+
+1:{
+name:"분석탐구형",
+description:"개념과 원리를 체계적으로 이해하며 학습하는 유형",
+tips:[
+"개념 연결도 작성하기",
+"심화 탐구 노트 만들기",
+"친구에게 개념 설명하기",
+"단원 간 연관성 분석하기"
+]
+},
+
+2:{
+name:"적용실천형",
+description:"문제를 해결하고 적용하는 과정에서 가장 크게 성장하는 유형",
+tips:[
+"오답노트 작성하기",
+"유형별 문제 반복하기",
+"실전 문제풀이 연습하기",
+"풀이 과정 설명해보기"
+]
+},
+
+3:{
+name:"자기조절형",
+description:"계획 수립과 목표 관리를 통해 성과를 만들어내는 유형",
+tips:[
+"주간 계획표 작성하기",
+"체크리스트 활용하기",
+"학습 시간 기록하기",
+"목표 달성 점검하기"
+]
+},
+
+4:{
+name:"협력소통형",
+description:"질문과 토론, 상호작용을 통해 이해를 심화하는 유형",
+tips:[
+"스터디 활동 참여하기",
+"친구와 상호 설명하기",
+"질문 노트 작성하기",
+"토론 학습 활용하기"
+]
+},
+
+5:{
+name:"융합전략형",
+description:"상황에 따라 다양한 학습 전략을 유연하게 활용하는 유형",
+tips:[
+"과목별 전략 구분하기",
+"강점과 약점 분석하기",
+"다양한 학습법 병행하기",
+"정기적으로 학습법 점검하기"
+]
+}
+
+};
+
+const qBox = document.getElementById("questions");
+
+questions.forEach((q,index)=>{
+
+let html = `
+<div class="question">
+<b>${index+1}. ${q.question}</b>
+`;
+
+q.choices.forEach((choice,i)=>{
+
+html += `
+<label>
+<input type="radio" name="q${index}" value="${i+1}">
+${choice}
+</label>
+`;
+
+});
+
+html += `</div>`;
+
+qBox.innerHTML += html;
+
+});
+
+function showResult(){
+
+let scores = {
+1:0,
+2:0,
+3:0,
+4:0,
+5:0
+};
+
+for(let i=0;i<questions.length;i++){
+
+const checked =
+document.querySelector(`input[name="q${i}"]:checked`);
+
+if(!checked){
+alert("모든 문항에 응답해줘");
+return;
+}
+
+scores[checked.value]++;
+
+}
+
+const resultType =
+Object.keys(scores).reduce(
+(a,b)=>scores[a] >= scores[b] ? a : b
+);
+
+const profile = profiles[resultType];
+
+document.getElementById("result").style.display="block";
+
+document.getElementById("type").innerText =
+profile.name;
+
+document.getElementById("description").innerText =
+profile.description;
+
+document.getElementById("tips").innerHTML =
+profile.tips.map(
+tip => `<li>${tip}</li>`
+).join("");
+
+window.scrollTo({
+top:document.body.scrollHeight,
+behavior:"smooth"
+});
+
+}
+
+</script>
 
 const profiles = {
 
